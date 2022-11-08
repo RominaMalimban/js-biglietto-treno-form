@@ -14,20 +14,15 @@ myButton.addEventListener("click",
 
         // salvo in una variabile il riferimento a nome e cognome del pax:
         let inputNome = document.getElementById("nome");
-        console.log(inputNome);
         let nomePax = inputNome.value;
-        console.log(nomePax);
 
         // salvo in una variabile il riferimento al numero di chilometri da percorrere:
-        let inputKm = document.getElementById("chilometri");
-        // console.log(inputKm);
+        let inputKm = document.getElementById("chilometri");     // console.log(inputKm);
         let numeroKm = inputKm.value;
-        console.log(numeroKm);
 
         // salvo in una variabile la scelta dell'utente per la fascia di età:
         let inputEta = document.getElementById("eta");
         let eta = inputEta.value;
-        console.log(eta);
 
         // al click devo mettere in display block il biglietto:
         let mioBiglietto = document.querySelector(".mioBiglietto");
@@ -51,15 +46,15 @@ myButton.addEventListener("click",
         // output codice CP:
         document.getElementById("output-codice").innerHTML = codice;
 
-        // creo le mie condizioni:
+        // creo le mie condizioni per prezzi dei biglietti:
         if (eta === "minorenne"){
             let prezzoMinorenne = (prezzoBiglietto - scontoMinorenne).toFixed(2);
             document.getElementById("output-costo").innerHTML= `${prezzoMinorenne}€`;
-            document.getElementById("output-offerta").innerHTML= "Sconto del 20%"
+            document.getElementById("output-offerta").innerHTML= "Sconto del 20%";
         }else if (eta === "senior"){
             let prezzoSenior = (prezzoBiglietto - scontoSenior).toFixed(2);
             document.getElementById("output-costo").innerHTML= `${prezzoSenior}€`;
-            document.getElementById("output-offerta").innerHTML= "Sconto del 40%"
+            document.getElementById("output-offerta").innerHTML= "Sconto del 40%";
         }else{
             prezzoBiglietto;
             document.getElementById("output-costo").innerHTML= `${prezzoBiglietto}€`;
@@ -69,6 +64,7 @@ myButton.addEventListener("click",
     }
 );
 
+// creo una funzione per resettare:
 let myButtonReset = document.getElementById("btn-annulla");
 
 myButtonReset.addEventListener("click",

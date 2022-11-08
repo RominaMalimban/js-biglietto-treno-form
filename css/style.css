@@ -58,7 +58,7 @@ form label{
 
 .mioBiglietto{
     margin: 50px 0;
-    /* display: none; */
+    display: none;
 }
 
 .mioBiglietto h3{
