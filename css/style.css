@@ -37,6 +37,7 @@ form label{
     display: block;
     margin-bottom: 10px;
     font-size: 16px;
+    font-weight: bold;
 }
 
 .labels{
@@ -44,12 +45,16 @@ form label{
     width: calc(100% / 3);
 }
 
+.labels input, .labels select{
+    padding: 5px;
+    height: 30px;
+    border-radius: 10px;
+}
 #btn, #btn-annulla{
     padding: 5px 10px;
-    margin-inline: 10px;
+    margin: 20px 10px;
     border: 2px solid #000;
     border-radius: 10px;
-    background-color: #D2B48C;
 }
 
 #btn:hover, #btn-annulla:hover{
@@ -65,9 +70,17 @@ form label{
     padding: 20px 0;
 }
 
+table{
+    padding: 20px 20px 40px 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
 table th, tbody td{
     width: calc(100% / 5);
 }
+
 
 tbody td{
     padding-top: 20px;
