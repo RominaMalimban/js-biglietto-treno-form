@@ -32,6 +32,25 @@ myButton.addEventListener("click",
         // al click devo mettere in display block il biglietto:
         let mioBiglietto = document.querySelector(".mioBiglietto");
         mioBiglietto.style.display="block";
+
+        // variabili
+        let costoPerKm = 0.21;
+        let prezzoBiglietto = (numeroKm * costoPerKm).toFixed(2);
+        let scontoMinorenne = prezzoBiglietto * 20 / 100;
+        let scontoSenior = prezzoBiglietto * 40 / 100;
+
+        // creo le mie condizioni:
+        if (eta === "minorenne"){
+            let prezzoMinorenne = (prezzoBiglietto - scontoMinorenne).toFixed(2);
+            document.getElementById("prezzo-biglietto").innerHTML= prezzoMinorenne;
+        }else if (eta === "senior"){
+            let prezzoSenior = (prezzoBiglietto - scontoSenior).toFixed(2);
+            document.getElementById("prezzo-biglietto").innerHTML= prezzoSenior;
+        }else{
+            prezzoBiglietto;
+            document.getElementById("prezzo-biglietto").innerHTML= prezzoBiglietto;
+        }
+
     }
 );
 
