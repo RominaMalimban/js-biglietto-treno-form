@@ -29,7 +29,8 @@ h1{
 form {
     display: flex;
     justify-content: center;
-
+    flex-wrap: wrap;
+    text-align: center;
 }
 
 form label{
@@ -39,13 +40,25 @@ form label{
 }
 
 .labels{
-    padding: 20px;
+    padding: 20px 0;
+    width: calc(100% / 3);
 }
 
+#btn, #btn-annulla{
+    padding: 5px 10px;
+    margin-inline: 10px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    background-color: #D2B48C;
+}
+
+#btn:hover, #btn-annulla:hover{
+    background-color: #fff;
+}
 
 .mioBiglietto{
-    margin-top: 30px;
-    display: none;
+    margin: 50px 0;
+    /* display: none; */
 }
 
 .mioBiglietto h3{
