@@ -33,24 +33,46 @@ myButton.addEventListener("click",
         let mioBiglietto = document.querySelector(".mioBiglietto");
         mioBiglietto.style.display="block";
 
-        // variabili
+        // output nome pax:
+        document.getElementById("output-nome").innerHTML = nomePax;
+
+        // variabili:
         let costoPerKm = 0.21;
         let prezzoBiglietto = (numeroKm * costoPerKm).toFixed(2);
         let scontoMinorenne = prezzoBiglietto * 20 / 100;
         let scontoSenior = prezzoBiglietto * 40 / 100;
+        let numCarrozza = Math.floor(Math.random() * 10) + 1;
+        let codice = Math.floor(Math.random() * 10000) + 1;
+
+        
+        // output numero carrozza:
+        document.getElementById("output-carrozza").innerHTML = numCarrozza;
+
+        // output codice CP:
+        document.getElementById("output-codice").innerHTML = codice;
 
         // creo le mie condizioni:
         if (eta === "minorenne"){
             let prezzoMinorenne = (prezzoBiglietto - scontoMinorenne).toFixed(2);
-            document.getElementById("prezzo-biglietto").innerHTML= prezzoMinorenne;
+            document.getElementById("output-costo").innerHTML= `${prezzoMinorenne}€`;
+            document.getElementById("output-offerta").innerHTML= "Sconto del 20%"
         }else if (eta === "senior"){
             let prezzoSenior = (prezzoBiglietto - scontoSenior).toFixed(2);
-            document.getElementById("prezzo-biglietto").innerHTML= prezzoSenior;
+            document.getElementById("output-costo").innerHTML= `${prezzoSenior}€`;
+            document.getElementById("output-offerta").innerHTML= "Sconto del 40%"
         }else{
             prezzoBiglietto;
-            document.getElementById("prezzo-biglietto").innerHTML= prezzoBiglietto;
+            document.getElementById("output-costo").innerHTML= `${prezzoBiglietto}€`;
+            document.getElementById("output-offerta").innerHTML= "Biglietto standard";
         }
 
     }
 );
 
+let myButtonReset = document.getElementById("btn-annulla");
+
+myButtonReset.addEventListener("click",
+    function(){
+        document.getElementById("myForm").reset();
+    }
+);

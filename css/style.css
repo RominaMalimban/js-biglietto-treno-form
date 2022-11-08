@@ -7,13 +7,14 @@
 body{
     background-image: url(../img/sfondo\ treno.jpg);
     background-size: cover;
+    font-family: sans-serif;
 }
 
 .container{
     width: 950px;
     border: 3px solid #D2B48C;
     padding: 30px;
-    background-color:rgba(255, 255, 255, 0.498);
+    background-color:rgba(255, 255, 255, 0.397);
     color: #000;
     position: absolute;
     left: 50%;
@@ -21,6 +22,42 @@ body{
     transform: translate(-50%, -50%);
 }
 
+h1{
+    text-align: center;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+
+}
+
+form label{
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.labels{
+    padding: 20px;
+}
+
+
 .mioBiglietto{
+    margin-top: 30px;
     display: none;
+}
+
+.mioBiglietto h3{
+    padding: 20px 0;
+}
+
+table th, tbody td{
+    width: calc(100% / 5);
+}
+
+tbody td{
+    padding-top: 20px;
+    text-align: center;
+    font-size: 16px;
 }

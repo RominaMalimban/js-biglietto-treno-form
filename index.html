@@ -12,26 +12,55 @@
     <div class="container">
         <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
     
-        <form action="">
-            <label for="nome">Nome e Cognome</label>
-            <input type="text" id="nome">
+        <form action="" id="myForm">
 
-            <label for="chilometri">Km da percorrere</label>
-            <input type="text" id="chilometri">
-
-            <label for="eta">Fascia d&#39;et&aacute;</label>
-            <select name="eta" id="eta" form="eta-form">
-                <option value="minorenne">Minorenne</option>
-                <option value="adulto">Adulto</option>
-                <option value="senior">Senior</option>
-            </select>
+            <div class="labels">
+                <label for="nome">Nome e Cognome:</label>
+                <input type="text" id="nome" placeholder="Nome e Cognome">
+            </div>
+            
+            <div class="labels">
+                <label for="chilometri">Km da percorrere:</label>
+                <input type="text" id="chilometri" placeholder="Km da percorrere">
+            </div>
+            
+            <div class="labels">
+                <label for="eta">Fascia d&#39;et&aacute;:</label>
+                <select name="eta" id="eta" form="eta-form">
+                    <option value="minorenne">Minorenne</option>
+                    <option value="adulto">Adulto</option>
+                    <option value="senior">Senior</option>
+                </select>
+            </div>
+            
 
             <input type="submit" value="Genera" id="btn">
+            <input type="submit" value="Annulla" id="btn-annulla">
         </form>
 
         <div class="mioBiglietto">
-            <div>IL TUO BIGLIETTO:</div>
-            <span id="prezzo-biglietto">Costo biglietto:</span>
+            <h1>IL TUO BIGLIETTO:</h1>
+            <h3 id="prezzo-biglietto">DETTAGLIO PASSEGGERI</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>NOME PASSEGGERO</th>
+                        <th>Offerta</th>
+                        <th>Carrozza</th>
+                        <th>Codice CP</th>
+                        <th>Costo Biglietto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="output-nome"></td>
+                        <td id="output-offerta"></td>
+                        <td id="output-carrozza"></td>
+                        <td id="output-codice"></td>
+                        <td id="output-costo"></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
     </div>
