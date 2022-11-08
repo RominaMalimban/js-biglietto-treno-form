@@ -17,8 +17,9 @@ myButton.addEventListener("click",
 
         // salvo in una variabile il riferimento al numero di chilometri da percorrere:
         let inputKm = document.getElementById("chilometri");
-        console.log(inputKm);
+        // console.log(inputKm);
         let numeroKm = inputKm.value;
         console.log(numeroKm);
+
     }
 );
