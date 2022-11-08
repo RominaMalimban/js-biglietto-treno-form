@@ -10,7 +10,7 @@ myButton.addEventListener("click",
 
     function(event){
        
-        preventDefault();
+        event.preventDefault();
 
         // salvo in una variabile il riferimento a nome e cognome del pax:
         let inputNome = document.getElementById("nome");
