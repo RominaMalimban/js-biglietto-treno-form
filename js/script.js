@@ -9,6 +9,7 @@ let myButton = document.getElementById("btn");
 myButton.addEventListener("click",
 
     function(){
+       
         // salvo in una variabile il riferimento a nome e cognome del pax:
         let inputNome = document.getElementById("nome");
         console.log(inputNome);
@@ -24,6 +25,11 @@ myButton.addEventListener("click",
         // salvo in una variabile la scelta dell'utente per la fascia di età:
         let inputEta = document.getElementById("eta");
         let eta = inputEta.value;
-        console.log(eta)
+        console.log(eta);
+
+        // al click devo mettere in display block il biglietto:
+        let mioBiglietto = document.querySelector(".mioBiglietto");
+        mioBiglietto.style.display="block";
     }
 );
+
