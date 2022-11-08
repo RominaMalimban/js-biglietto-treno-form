@@ -8,8 +8,10 @@ let myButton = document.getElementById("btn");
 // creo l'evento:
 myButton.addEventListener("click",
 
-    function(){
+    function(event){
        
+        preventDefault();
+
         // salvo in una variabile il riferimento a nome e cognome del pax:
         let inputNome = document.getElementById("nome");
         console.log(inputNome);
