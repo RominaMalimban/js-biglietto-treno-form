@@ -21,5 +21,9 @@ myButton.addEventListener("click",
         let numeroKm = inputKm.value;
         console.log(numeroKm);
 
+        // salvo in una variabile la scelta dell'utente per la fascia di età:
+        let inputEta = document.getElementById("eta");
+        let eta = inputEta.value;
+        console.log(eta)
     }
 );
