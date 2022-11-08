@@ -17,7 +17,7 @@ myButton.addEventListener("click",
         let nomePax = inputNome.value;
 
         // salvo in una variabile il riferimento al numero di chilometri da percorrere:
-        let inputKm = document.getElementById("chilometri");     // console.log(inputKm);
+        let inputKm = document.getElementById("chilometri");     
         let numeroKm = inputKm.value;
 
         // salvo in una variabile la scelta dell'utente per la fascia di età:
