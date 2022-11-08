@@ -77,10 +77,13 @@ table{
     background-color: #fff;
 }
 
+thead{
+    background-color: gray;
+}
+
 table th, tbody td{
     width: calc(100% / 5);
 }
-
 
 tbody td{
     padding-top: 20px;
